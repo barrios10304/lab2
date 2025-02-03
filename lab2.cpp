@@ -5,6 +5,7 @@
 //date: Spring 2022
 //purpose: get openGL working on your personal computer
 //
+// transfered things from asteroids
 
 
 
@@ -276,10 +277,17 @@ void render()
 {
 //
 	glClear(GL_COLOR_BUFFER_BIT);
-	//Draw box.
+	//glTranslatef(g.pos[0], g.pos[1], 0.0f);
+	glBegin(GL_QUADS);
+		glVertex2f(-5, -5);
+		glVertex2f(-5,  5);
+		glVertex2f( 5,  5);
+        glVertex2f(5,-5);
+    glEnd();
+        //Draw box.
 	glPushMatrix();
 	glColor3ub(250, 120, 220);
-	glTranslatef(g.pos[0], g.pos[1], 0.0f);
+	//glTranslatef(g.pos[0], g.pos[1], 0.0f);
 	glBegin(GL_QUADS);
 		glVertex2f(-g.w, -g.w);
 		glVertex2f(-g.w,  g.w);
